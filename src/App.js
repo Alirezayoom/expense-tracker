@@ -12,7 +12,7 @@ function App() {
     const expenseData = {
       ...data
     }
-    console.log(data)
+    console.log(expenseData)
   }
 
   return (<div>
