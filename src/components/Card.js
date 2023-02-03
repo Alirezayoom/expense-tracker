@@ -1,5 +1,5 @@
 import "./Card.css";
 
-export default function Card() {
-  return <div className="card">card</div>;
+export default function Card({ children }) {
+  return <div className="card">{children}</div>;
 }
