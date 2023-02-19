@@ -1,8 +1,8 @@
 import Expenses from "./components/Expenses/Expenses";
-
 import NewExpense from "./components/NewExpense/NewExpense";
+import { useState } from "react";
 
-const expenses = [
+const DUMMY_EXPENSES = [
   {
     id: 1,
     title: "iPhone 14 pro",
@@ -18,8 +18,12 @@ const expenses = [
 ];
 
 function App() {
-  const addHandler = (data) => {
-    console.log(data);
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  const addHandler = (newItem) => {
+    setExpenses((prevExtenses) => {
+      return [newItem, ...prevExtenses];
+    });
   };
 
   return (
