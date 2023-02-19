@@ -18,13 +18,12 @@ export default function Expenses({ items }) {
         onChangeFilter={filterChangeHandler}
       />
       {items.map((item) => (
-        <div key={item.id}>
-          <ExpenseItem
-            title={item.title}
-            amount={item.amount}
-            date={item.date}
-          />
-        </div>
+        <ExpenseItem
+          key={item.id}
+          title={item.title}
+          amount={item.amount}
+          date={item.date}
+        />
       ))}
     </Card>
   );
