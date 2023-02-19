@@ -18,9 +18,13 @@ const expenses = [
 ];
 
 function App() {
+  const addHandler = (data) => {
+    console.log(data);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAdd={addHandler} />
       <Expenses items={expenses} />
     </div>
   );
