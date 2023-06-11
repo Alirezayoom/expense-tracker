@@ -29,6 +29,7 @@ const ChartBar = ({ value, maxValue, label }) => {
             position: "absolute",
             bottom: "0",
             width: "100%",
+            transition: "all 1s ",
           }}
         ></div>
       </div>
